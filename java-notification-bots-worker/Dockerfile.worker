@@ -1,0 +1,17 @@
+FROM codingraven/alpine_jdk8
+
+LABEL maintainer "RavenCode"
+LABEL version="1.0"
+LABEL description="Worker container java-notification-bots Project"
+
+ENV PORT 8080
+
+# Run the image as a non-root user
+RUN adduser -D app
+USER app
+
+WORKDIR /home/app
+
+ADD target/java-notification-bots-worker-1.0.0-SNAPSHOT.jar worker.jar
+
+CMD ["java", "-jar", "worker.jar", "--server.port=${PORT}"]

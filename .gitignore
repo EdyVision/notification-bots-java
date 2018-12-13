@@ -1,0 +1,26 @@
+*/target/**
+
+
+.DS_Store
+!.mvn/wrapper/maven-wrapper.jar
+
+### Code ###
+.vscode
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Ignore Config File ###
+*.env
